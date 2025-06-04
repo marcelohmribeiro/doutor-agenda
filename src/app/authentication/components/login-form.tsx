@@ -78,7 +78,11 @@ function LoginForm() {
                 <FormItem>
                   <FormLabel>Senha</FormLabel>
                   <FormControl>
-                    <Input placeholder="Digite seu senha" {...field} />
+                    <Input
+                      type="password"
+                      placeholder="Digite seu senha"
+                      {...field}
+                    />
                   </FormControl>
                   <FormDescription></FormDescription>
                   <FormMessage />
