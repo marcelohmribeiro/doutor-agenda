@@ -385,7 +385,7 @@ const UpsertDoctorForm = ({ doctor, onSuccess }: UpsertDoctorFormProps) => {
               {upsertDoctorAction.isPending
                 ? "Salvando..."
                 : doctor
-                  ? "Adicionando..."
+                  ? "Salvar"
                   : "Adicionar"}
             </Button>
           </DialogFooter>
