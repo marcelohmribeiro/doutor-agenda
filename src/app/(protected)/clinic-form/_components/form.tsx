@@ -24,7 +24,7 @@ const clinicsFormSchema = z.object({
   name: z.string().trim().min(1, { message: "Nome é obrigatorio" }).max(50),
 });
 
-function ClincForm() {
+const ClincForm = () => {
   const form = useForm<z.infer<typeof clinicsFormSchema>>({
     resolver: zodResolver(clinicsFormSchema),
     defaultValues: {
@@ -73,6 +73,6 @@ function ClincForm() {
       </Form>
     </div>
   );
-}
+};
 
 export default ClincForm;
