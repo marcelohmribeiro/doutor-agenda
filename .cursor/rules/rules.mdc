@@ -31,12 +31,12 @@ React/Next.js
 - Sempre use React Hook Form para criação e validação de formulários. Use o componente [form.tsx](mdc:src/components/ui/form.tsx) para criar. Exemplo: [upsert-doctor-form.tsx](mdc:src/app/(protected)/doctors/_components/upsert-doctor-form.tsx).
 - Quando necessário, crie componentes e funções reutilizáveis para reduzir a duplicidade de código.
 - Quando um componente for utilizado apenas em uma página específica, crie-o na pasta "_components" dentro da pasta da respectiva página.
-- Sempre use a biblioteca "next-safe-action" ao criar com Server Actions. Use a Server Exemplo: [index.ts](mdc:src/actions/upsert-doctors/index.ts)
+- Sempre use a biblioteca "next-safe-action" ao criar com Server Actions. Use a Server Exemplo: [index.ts](mdc:src/actions/upsert-doctors/index.ts).
 - Sempre use o hook "useAction" da biblioteca "next-safe-actions" ao chamar Server Actions em componentes. Exemplo: [upsert-doctor-form.tsx](mdc:src/app/(protected)/doctors/_components/upsert-doctor-form.tsx).
 - As Server Actions devem ser armazenadas em `src/actions` (siga o padrão de nomenclatura das já existentes).
 - Sempre interagir com o banco de dados, use o [index.ts](mdc:src/db/index.ts).
 - Usblioteca "dayjs" para manipular e formatar datas.
-- Ao criar páginas, use os componentes dentro de [page-container.tsx](mdc:src/components/ui/page-container.tsx) para manter os padrões de margin, padding e spacing nas páginas. Exemplo: [page.tsx](mdc:src/app/(protected)/doctors/page.tsx)
+- Ao criar páginas, use os componentes dentro de [page-container.tsx](mdc:src/components/ui/page-container.tsx) para manter os padrões de margin, padding e spacing nas páginas. Exemplo: [page.tsx](mdc:src/app/(protected)/doctors/page.tsx).
 - Sempre use a biblioteca "react-number-format" ao criar máscaras para inputs.
 
 
