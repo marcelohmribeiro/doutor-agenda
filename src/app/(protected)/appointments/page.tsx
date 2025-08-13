@@ -27,13 +27,13 @@ async function AppointmentsPage() {
   if (!session?.user) {
     redirect("/authentication");
   }
-
+  if (!session.user.plan) {
+    redirect("/new-subscription");
+  }
   if (!session?.user.clinic) {
     redirect("/clinic-form");
   }
-
   const clinicId = session.user.clinic.id;
-
   const [doctors, patients, appointments] = await Promise.all([
     db.query.doctorsTable.findMany({
       where: eq(doctorsTable.clinicId, clinicId),

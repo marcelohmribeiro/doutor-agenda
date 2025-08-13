@@ -20,6 +20,9 @@ const SubscriptionPage = async () => {
   if (!session) {
     redirect("/login");
   }
+  if (!session.user.plan) {
+    redirect("/new-subscription");
+  }
   if (!session.user.clinic) {
     redirect("/clinic-form");
   }
