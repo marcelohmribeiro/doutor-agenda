@@ -1,16 +1,18 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
+import {} from "@/components/ui/dropdown-menu";
 import { auth } from "@/lib/auth";
 
 import { SubscriptionPlan } from "../(protected)/subscription/_components/subscription-plan";
+import { SignOutDropdown } from "./_components/sign-out-dropdown";
 
 export default async function Home() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
   if (!session) {
-    redirect("/login");
+    redirect("/authentication");
   }
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-6">
@@ -46,6 +48,9 @@ export default async function Home() {
           sua rotina com nossa solução. Garantia de satisfação de 30 dias ou seu
           dinheiro de volta.
         </p>
+      </div>
+      <div className="mb-6 self-end">
+        <SignOutDropdown />
       </div>
     </div>
   );
